@@ -1,0 +1,39 @@
+$color-primary: #223A75;
+$color-secondary: #EA6B6A;
+$color-text:#737373;
+$font-primary: 'Rubik', sans-serif;
+
+
+@mixin desktop {
+    @media (min-width: 760px) { @content; }
+}
+@mixin mobile {
+  @media (max-width: 760px) { @content; }
+
+}
+
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }  
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+  @mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+  }
